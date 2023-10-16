@@ -1,0 +1,335 @@
+body{
+    margin : 0;
+    padding : 0;
+    width:auto;
+    background-color: black ;
+}
+/* ---------navigation---------- */
+.navi{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    background-color: black;
+    padding-bottom: 5px;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 30px;
+}
+nav ul li a{
+    font-size: 15px;
+    font-family: Georgia;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #641E16;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/* ---------home--------- */
+#fake{
+    width: 100%;
+    height:15vh;
+    background-color: black;
+}
+#home{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-image: url(pic1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* ----------about---------- */
+#about{
+    background-color: black;
+    color: white;
+    height: 75vh;
+    padding-top: 80px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.pic{
+    flex-basis: 35%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    padding-right: 0;
+}
+.pic img{
+    width: 75%;
+    height: 85%;
+    border-radius: 50px;
+}
+.me{
+    flex-basis: 60%;
+    padding-left: 0;
+    margin-left: 0;
+}
+.sub{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Times New Roman';
+}
+.tabs{
+    display: flex;
+    margin: 20px 0 30px;
+    font-family: 'Times New Roman';
+}
+.tab_links{
+    margin-right: 50px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab_links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #641E16;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab_links.activelink::after{
+    width: 50%;
+}
+.tab_cont ul li{
+    list-style: none;
+    margin-top: 7px;
+    margin-left: 0;
+    font-size: 17px;
+    text-align: left;
+}
+.tab_cont ul li span{
+    color: #641E16;
+    font-size: 18px;
+}
+.tab_cont{
+    display: none;
+}
+.tab_cont.act{
+    display: block;
+}
+/* ---------skills---------- */
+#skills{
+    background-color: black;
+    color: white;
+    padding-top: 40px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.skill_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 200px));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.skill_list div{
+    background: #641E16;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    border-bottom: 10px;
+    border-radius: 5px;
+}
+.skill_list div i{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.skill_list div h3{
+    font-size: 25px;
+    text-align: center;
+    line-height: 28px;
+    padding-bottom: 10px;
+}
+.skill_list div ul li{
+    list-style: none;
+    margin-top: 7px;
+    margin-left: 0;
+    font-size: 18px;
+    text-align: left;
+    line-height: 20px;
+}
+.skill_list div ul li span{
+    color: white;
+    font-size: 18px;
+    line-height: 20px;
+}
+.skill_list div ul li progress{
+    width: 300px;
+    height: 12px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+.skill_list div ul li progress::-webkit-progress-bar{
+    background-color: black;
+    border-radius: 50px;
+}
+.skill_list div ul li progress::-webkit-progress-value{
+    background-color: white;
+    border-radius: 50px;
+}
+/* --------- PROJECTS--------- */
+#projects{
+    background-color: black;
+    color: white;
+    height: 90vh;
+    padding-top: 40px;
+    padding-left: 90px;
+    padding-right: 70px;
+}
+.work_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 90px));
+    grid-gap: 140px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0,0,0,0.6),#641E16);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 30px;
+    text-align: center;
+}
+.layer h3{
+    font-weight: 1400;
+    margin-bottom: 20px;
+}
+.layer pre{
+    font-size: 14px;
+    line-height: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    background: white;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+/* --------contact--------- */
+#contact{
+    background-color: black;
+    color: white;
+    height: 60vh;
+    margin-top: 60px;
+    padding-top: 40px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.left{
+    flex-basis: 60%;
+
+}
+.right{
+    flex-basis: 35%;
+    margin-left: 70px;
+}
+.left pre{
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.socials{
+    margin-top: 30px;
+}
+.socials a{
+    text-decoration: none;
+    font-size: 30px;
+    background: transparent;
+    line-height: 60px;
+    width: 500px;
+    height: 450px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.right p{
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    align-content: center;
+}
+.right p a{
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    font-size: 40px;
+    background: transparent;
+    line-height: 60px;
+    width: 500px;
+    height: 450px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 50px;
+    margin-right: 10px;
+    margin-left: 20px;
+    text-align: right;
+}
+/* -------FOOTER--------- */
+hr{
+    border: 0.2px solid white;    
+}
+.footer{
+    width: 100%;
+    height: 8vh;
+    background: black;
+    color: white;
+    justify-content: center;
+}
+.footer pre{
+    padding-left: 48%;
+    justify-content: center;
+    font-size: 15px;
+}
